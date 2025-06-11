@@ -23,21 +23,48 @@
             placeholder="Seu nome"
             required
           />
+
           <button type="submit" class="login__button">Entrar</button>
+
+          <div
+            class="avatar-upload-container"
+            style="text-align: center; margin-bottom: 15px; cursor: pointer"
+          >
+            <img
+              id="avatarPreview"
+              src="default-avatar.png"
+              alt="Avatar"
+              style="
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid #ddd;
+              "
+              title="Clique para selecionar sua foto"
+            />
+            <input
+              type="file"
+              id="fileInput"
+              class="login__file"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
         </form>
       </section>
 
       <section class="chat">
         <section class="chat__messages">
-          <!-- <div class="message--self"></div>
+          <!-- <div class="message--self">Hello, World!</div>
 
                 <div class="message--other">
-                    <span class="message--sender"></span>
+                    <span class="message--sender">Manual do Dev</span>
                     Olá, Mundo!
                 </div> -->
         </section>
 
-        <form class="chat__formulario">
+        <form class="chat__form">
           <input
             type="text"
             class="chat__input"

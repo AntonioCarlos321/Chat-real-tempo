@@ -12,7 +12,7 @@
 }
 
 body {
-  background: url("/frontend/imagens/background.png");
+  background: url("/frontend/imagens/fundo-preto-simples.jpg");
   color: #f2f2f2;
 }
 
@@ -89,9 +89,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow-y: auto;
 }
 
-.chat__formulario {
+.chat__form {
   background-color: #191919;
   padding: 15px 20px;
   display: flex;
@@ -136,22 +137,71 @@ body {
 }
 
 .message--self {
-  background-color: #f2f2f2;
-  color: #121212;
-  border-radius: 10px 10px 0 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 10px 0;
+  gap: 10px;
+  max-width: 80%;
   align-self: flex-end;
 }
 
+.message--self .message__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .message--other {
-  background-color: #333;
-  color: #f2f2f2;
-  border-radius: 0 10px 10px 10px;
-  align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+  gap: 10px;
+  max-width: 80%;
 }
 
 .message--sender {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
   font-weight: 700;
-  color: cadetblue;
+  /* cor definida pelo JavaScript dinamicamente */
+}
+
+.message--self .message__content {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  word-break: break-word;
+  max-width: 100%;
+  text-align: right;
+}
+
+.message--self .message__bubble {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.message__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #555;
+}
+
+.message__content {
+  display: flex;
+  flex-direction: column;
+  color: #f2f2f2;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  word-break: break-word;
+  max-width: 100%;
 }
